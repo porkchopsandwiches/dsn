@@ -1,0 +1,60 @@
+{
+	"name": "@porkchopsandwiches/dsn",
+	"version": "0.0.1",
+	"description": "DSN parsing and stringifying",
+	"license": "MIT",
+	"repository": "porkchopsandwiches/dsn",
+	"author": {
+		"name": "Cameron Morrow",
+		"email": "cam.morrow+dev@gmail.com",
+		"url": "https://github.com/porkchopsandwiches"
+	},
+	"type": "module",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"build": "del-cli dist && tsc",
+		"test:ava": "ava",
+		"test": "npm run lint && npm run test:ava && npm run build",
+		"lint": "xo",
+		"lint:fix": "xo --fix",
+		"prepack": "npm run build"
+	},
+	"keywords": [
+		"typescript",
+		"dsn",
+		"parse",
+		"stringify"
+	],
+	"sideEffects": false,
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"del-cli": "^4.0.1",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.2",
+		"xo": "^0.47.0"
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module"
+		},
+		"nonSemVerExperiments": {
+			"configurableModuleFormat": true
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm"
+		]
+	},
+	"xo": {
+		"prettier": true,
+		"rules": {
+			"unicorn/filename-case": "off"
+		}
+	},
+	"dependencies": {
+		"@sindresorhus/is": "^4.2.0"
+	}
+}
