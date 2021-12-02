@@ -23,6 +23,9 @@
 		"lint:fix": "xo --fix",
 		"prepack": "npm run build"
 	},
+    "files": [
+        "dist"
+    ],
 	"keywords": [
 		"typescript",
 		"dsn",

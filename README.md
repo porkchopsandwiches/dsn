@@ -38,7 +38,7 @@ The Dsn string *must* contain a **protocol**, **host** and **path**. It *may* co
 The Dsn object *must* contain a **protocol** `string`, **host** `string` and **path** `string`. It *may* contain a **username** `string`, **password** `string`, **port** `number` and/or **query** `URLSearchParams`.
 
 ### Dsn object
-Dsn objects are returned by `parse()` and taken by `stringify`.
+Dsn objects are returned by `parse()` and taken by `stringify()`.
 
 | Field      | Type              | Notes    |
 | ---------- | ----------------- | -------- |
