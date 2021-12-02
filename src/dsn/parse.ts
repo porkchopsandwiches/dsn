@@ -19,7 +19,7 @@ type MatchGroup = {
  *
  * @returns {Dsn | undefined}	   An object describing the elements of the DSN, or undefined.
  */
-export const parse = (dsnString: string): Dsn | undefined => {
+export const parse = <HostType extends string = string>(dsnString: string): Dsn<HostType> | undefined => {
 	const match = parsePattern.exec(dsnString);
 
 	// No match, it doesn't look like a DSN
@@ -48,7 +48,7 @@ export const parse = (dsnString: string): Dsn | undefined => {
 		protocol,
 		username,
 		password,
-		host,
+		host: host as HostType,
 		port,
 		path,
 		query,
