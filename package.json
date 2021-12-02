@@ -1,6 +1,6 @@
 {
 	"name": "@porkchopsandwich/dsn",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "DSN parsing and stringifying",
 	"license": "MIT",
 	"repository": "porkchopsandwiches/dsn",
@@ -9,8 +9,8 @@
 		"email": "cam.morrow+dev@gmail.com",
 		"url": "https://github.com/porkchopsandwiches/dsn"
 	},
-	"type": "module",
-	"exports": "./dist/index.js",
+	"type": "commonjs",
+	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"engines": {
 		"node": ">=12"
@@ -54,7 +54,8 @@
 	"xo": {
 		"prettier": true,
 		"rules": {
-			"unicorn/filename-case": "off"
+			"unicorn/filename-case": "off",
+            "import/extensions": "off"
 		}
 	},
 	"dependencies": {

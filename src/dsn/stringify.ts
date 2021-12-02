@@ -1,5 +1,5 @@
 import is from "@sindresorhus/is";
-import type { Dsn } from "../types/Dsn.js";
+import type { Dsn } from "../types/Dsn";
 
 /**
  * Takes a Dsn object and returns a string representation of it.

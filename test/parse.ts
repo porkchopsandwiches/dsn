@@ -1,5 +1,5 @@
 import test from "ava";
-import { parse } from "../src/dsn/parse.js";
+import { parse } from "../src/dsn/parse";
 
 const sampleProtocol = "protocol";
 const sampleUsername = "u5er-n*me";

@@ -1,4 +1,4 @@
-import { Dsn } from "../types/Dsn.js";
+import { Dsn } from "../types/Dsn";
 
 // Inspired by https://github.com/fonini/dsn-parser/blob/master/index.js
 // protocol://(username:(password?)@?)host(:port?)/path(?query?)

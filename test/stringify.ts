@@ -1,6 +1,6 @@
 import test from "ava";
-import { stringify } from "../src/dsn/stringify.js";
-import type { Dsn } from "../src/types/Dsn.js";
+import { stringify } from "../src/dsn/stringify";
+import type { Dsn } from "../src/types/Dsn";
 
 const sampleProtocol = "protocol";
 const sampleUsername = "u5er-n*me";
