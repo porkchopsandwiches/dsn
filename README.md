@@ -1,17 +1,17 @@
-# @porkchopsandwiches/dsn
+# @porkchopsandwich/dsn
 
 DSN string parsing and stringifying.
 
 ## Install
 
 ```sh
-npm install @porkchopsandwiches/dsn
+npm install @porkchopsandwich/dsn
 ```
 
 ## Usage
 
 ```js
-import { parse, stringify } from "@porkchopsandwiches/dsn";
+import { parse, stringify } from "@porkchopsandwich/dsn";
 
 const parsed = parse("mysqli://user:p&ssw!rd@hostname:1234/path/to/entity?extra=1");
 // -> { protocol: "mysqli", username: "user", "password": "p&ssw!rd", host: "hostname", port: 1234, path: "path/to/entity", query: URLSearchParams }

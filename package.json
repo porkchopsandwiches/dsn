@@ -1,5 +1,5 @@
 {
-	"name": "@porkchopsandwiches/dsn",
+	"name": "@porkchopsandwich/dsn",
 	"version": "0.0.1",
 	"description": "DSN parsing and stringifying",
 	"license": "MIT",
@@ -7,7 +7,7 @@
 	"author": {
 		"name": "Cameron Morrow",
 		"email": "cam.morrow+dev@gmail.com",
-		"url": "https://github.com/porkchopsandwiches"
+		"url": "https://github.com/porkchopsandwiches/dsn"
 	},
 	"type": "module",
 	"exports": "./dist/index.js",
