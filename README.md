@@ -1,6 +1,6 @@
 # @porkchopsandwich/dsn
 
-DSN string parsing and stringifying.
+DSN URI string parsing and stringifying.
 
 ## Install
 
@@ -13,10 +13,12 @@ npm install @porkchopsandwich/dsn
 ```js
 import { parse, stringify } from "@porkchopsandwich/dsn";
 
+// Parse a DSN URI into elements
 const parsed = parse("mysqli://user:p&ssw!rd@hostname:1234/path/to/entity?extra=1");
 // -> { protocol: "mysqli", username: "user", "password": "p&ssw!rd", host: "hostname", port: 1234, path: "path/to/entity", query: URLSearchParams }
 
-const dsnString = stringify({
+// Compile a DSN object into a URI string
+const dsnUriString = stringify({
     protocol: "arbitrary",
     host: "unprotected.host",
     path: "path/to/dsn/entity"
@@ -27,7 +29,7 @@ const dsnString = stringify({
 
 ### `parse(dsnString: string): Dsn | undefined`
 
-`parse()` takes a `string`, and returns either a `Dsn` object (see below), or undefined if it does not look like a Dsn.
+`parse()` takes a `string`, and returns either a `Dsn` object (see below), or undefined if it does not look like a DSN URI.
 
 The Dsn string *must* contain a **protocol**, **host** and **path**. It *may* contain a **username**, **password**, **port** and/or **query**.
 
@@ -37,11 +39,11 @@ The Dsn string *must* contain a **protocol**, **host** and **path**. It *may* co
 
 The Dsn object *must* contain a **protocol** `string`, **host** `string` and **path** `string`. It *may* contain a **username** `string`, **password** `string`, **port** `number` and/or **query** `URLSearchParams`.
 
-### Dsn object
-Dsn objects are returned by `parse()` and taken by `stringify()`.
+### `Dsn` object
+Dsn objects are returned by `parse()` and taken by `stringify()`. They have the following form:
 
 | Field      | Type              | Notes    |
-| ---------- | ----------------- | -------- |
+|------------|-------------------|----------|
 | `protocol` | `string`          | Required |
 | `host`     | `string`          | Required |
 | `path`     | `string`          | Required |

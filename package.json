@@ -1,7 +1,7 @@
 {
 	"name": "@porkchopsandwich/dsn",
-	"version": "0.0.3",
-	"description": "DSN parsing and stringifying",
+	"version": "0.0.4",
+	"description": "DSN URI parsing and stringifying",
 	"license": "MIT",
 	"repository": "porkchopsandwiches/dsn",
 	"author": {
@@ -29,6 +29,7 @@
 	"keywords": [
 		"typescript",
 		"dsn",
+        "uri",
 		"parse",
 		"stringify"
 	],
